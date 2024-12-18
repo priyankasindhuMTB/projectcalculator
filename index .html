@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="main">
+            <input type="text" id="input">
+            </div>
+            
+            <div id="class">
+         
+                    <div>
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">Ac</button>
+                        <button type="button">/</button>
+                    </div>
+                    <div>
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+                        <button type="button">*</button>
+                        <button type="button">Dell</button>
+                        
+                    
+                    </div>
+                    <div id="">
+                        <button type="button">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">%</button>
+                        <button type="button">-</button>
+
+                    </div>
+                    <div>
+                        <button type="button">#</button>
+                        <button type="button">0</button>
+                        <button type="button">.</button>
+                        <button type="button">=</button>
+                        <button type="button">+</button>
+                    </div>
+            </div>
+       
+    </div>
+<script>
+  let a=document.querySelectorAll('button')
+  console.log(a);
+  
+    let b=Array.from(a)
+    // console.log(b)
+    let string=""
+    // console.log(string);
+
+   
+
+   b.forEach((c)=>{
+    c.addEventListener('click',function(e){
+      let val=e.target.innerHTML;
+      // console.log(val);
+      
+      //  console.log(val)
+      if (val=="=") {
+        string=eval(string)
+        input.value=string;
+        // console.log(string);
+        
+        
+      }else if(val=="Ac"){
+         string=""
+       input.value=string;
+      }else if(val=="Dell"){
+        string.length
+        string=string.substring(0,string.length-1)
+        input.value=string;
+        // console.log(string);
+        
+      }else{
+            string+=val;
+            input.value=string;
+            
+
+      }
+      
+     
+        
+      
+       
+    })
+    
+   })
+    
+
+   
+    
+
+</script>
+    
+</body>
+</html>
